@@ -35,26 +35,26 @@ export default function Login() {
 
   return (
     <div className="flex flex-col h-screen w-screen justify-center items-center">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-1/5 text-center">
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-          className="p-2 border border-gray-300 rounded"
+          placeholder="E-mail"
+          className="p-4 border border-gray-300 rounded-xl"
         />
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-          className="p-2 border border-gray-300 rounded"
+          placeholder="Senha"
+          className="p-4 border border-gray-300 rounded-xl"
         />
-        <button type="submit" className="p-2 bg-blue-500 text-white rounded">
+        <button type="submit" className="p-4 bg-teal-600 text-white text-xl rounded-xl hover:bg-teal-700">
           Login
         </button>
         <p>
-          Don't have an account? <Link href="/register">Register</Link>
+          Não possui conta? <Link href="/register" className='font-semibold'>Cadastre-se</Link>
         </p>
       </form>
     </div>
